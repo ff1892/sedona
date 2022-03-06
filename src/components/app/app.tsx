@@ -1,11 +1,20 @@
-import { GlobalStyle } from './app.styled';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-function App() {
+import { ThemeProvider } from 'styled-components';
+import { GlobalStyle } from './app.styled';
+import { appTheme } from '../../theme';
+import { MainPage } from '../components';
+
+function App(): JSX.Element {
   return (
-    <>
-    <GlobalStyle />
-    <h1>Test Header</h1>
-    </>
+    <BrowserRouter>
+      <ThemeProvider theme={appTheme}>
+        <GlobalStyle />
+          <Routes>
+            <Route path="/" element={<MainPage />}/>
+          </Routes>
+      </ThemeProvider>
+    </BrowserRouter>
   );
 }
 

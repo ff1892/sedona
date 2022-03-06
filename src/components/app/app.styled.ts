@@ -57,19 +57,19 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'PT Sans', Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
-    line-height: 22.5px;
-    color: white;
+    font-size: ${({ theme }) => theme.font.base};
+    line-height: 28px;
+    color: ${({ theme }) => theme.color.black};
     font-feature-settings: 'pnum' on, 'lnum' on;
 
-    background-color: black;
+    background-color: ${({ theme }) => theme.color.light};
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
   a {
-    color: red;
+    color: ${({ theme }) => theme.color.black};
     text-decoration: none;
   }
 
@@ -86,9 +86,9 @@ const GlobalStyle = createGlobalStyle`
 
   /* chrome autofill background removal */
   input:-webkit-autofill {
-    box-shadow: inset 0 0 0 1000px white;
+    box-shadow: inset 0 0 0 1000px ${({ theme }) => theme.color.white};
 
-    -webkit-text-fill-color: black};
+    -webkit-text-fill-color: ${({ theme }) => theme.color.black}};
   }
 
   /* firefox placeholder \ invalid fix + ios bdrs */
