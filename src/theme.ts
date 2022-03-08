@@ -7,7 +7,9 @@ const appTheme: DefaultTheme = {
     gray: '#E5E5E5',
     light: '#F2F2F2',
     white: '#FFFFFF',
+    white30: 'rgba(255, 255, 255, 0.3)',
     warmLight: '#756257',
+    warmLight30: 'rgba(117, 98, 87, 0.3)',
     warmDark: '#615048',
     neutralLight: '#7DB54F',
     neutralDark: '#6C9E42',
@@ -21,6 +23,7 @@ const appTheme: DefaultTheme = {
   },
 
   font: {
+    extraMini: '10px',
     mini: '16px',
     extraSmall: '18px',
     small: '20px',

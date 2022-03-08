@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { ReactComponent as SearchSvg } from '../../../assets/img/icons/icon-search.svg';
 import { ReactComponent as FavoritesSvg } from '../../../assets/img/icons/icon-favorites.svg';
+import { ButtonWarm } from '../../ui-kit/button/button.styled';
 
 type NavLinkProps = {
   isActive?: boolean,
@@ -15,33 +16,39 @@ const Header = styled.header`
 const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 0 71px;
+  padding: 13px 71px 13px 59px;
 `;
 
-const NavLink = styled.a<NavLinkProps>`
+const NavLink = styled(Link)<NavLinkProps>`
   display: block;
-  padding: 19px 0;
+  padding: 6px 12px;
   font-size: ${({ theme }) => theme.font.small};
   font-weight: 700;
   position: relative;
-  outline: none;
+  border-radius: 10px;
 
   &:hover {
     color: ${({ theme }) => theme.color.warmLight}
   }
 
+  &:focus {
+    outline: ${({ theme }) => theme.color.coolLight} solid 3px;
+    outline-offset: -3px;
+    color: ${({ theme }) => theme.color.warmLight}
+  }
+
   &:active {
-    box-shadow: none;
-    opacity: 0.3;
+    outline: none;
+    color: ${({ theme }) => theme.color.warmLight30}
   }
 
   ${({ isActive, theme }) => isActive && `
     &::before {
       position: absolute;
       content: '';
-      bottom: -1px;
-      left: 0;
-      right: 0;
+      bottom: -14px;
+      left: 12px;
+      right: 12px;
       height: 2px;
       background-color: ${theme.color.warmLight};
     }
@@ -54,7 +61,7 @@ const HeaderNav = styled.nav`
   max-width: 570px;
 
   ${NavLink}:not(:last-child) {
-    margin-right: 20px;
+    margin-right: 8px;
   }
 `;
 
@@ -65,11 +72,23 @@ const LogoLink = styled(Link)`
   transform: translateX(-50%);
   width: 138px;
   height: 70px;
+  outline: none;
+  border-radius: 10px;
+
+  &:focus {
+    outline: ${({ theme }) => theme.color.coolLight} solid 3px;
+    outline-offset: -3px;
+  }
+
+  &:active {
+    outline: none;
+  }
 `;
 
 const LogoImage = styled.img``;
 
 const HeaderInfo = styled.div`
+  position: relative;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -79,16 +98,8 @@ const HeaderInfo = styled.div`
   }
 `;
 
-const HeaderOrder = styled.a`
-  display: block;
-  padding: 9px 33px;
-  text-transform: uppercase;
-  font-size: ${({ theme }) => theme.font.mini};
-  line-height: 18px;
-  font-weight: 700;
-  color: ${({ theme }) => theme.color.white};
-  background-color: ${({ theme }) => theme.color.warmLight};
-  border-radius: 4px;
+const HeaderOrder = styled(ButtonWarm)`
+  min-width: 160px;
 `;
 
 const LinkIcon = styled(Link)`
@@ -99,26 +110,50 @@ const LinkIcon = styled(Link)`
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  outline: none;
+
+  &:hover svg path {
+      fill: ${({ theme }) => theme.color.warmLight};
+  }
 
   &:focus {
-    box-shadow: inset 0 0 0 3px ${({ theme }) => theme.color.coolLight};
+    outline: ${({ theme }) => theme.color.coolLight} solid 3px;
+    outline-offset: -3px;
+
+    svg path {
+      fill: ${({ theme }) => theme.color.warmLight};
+    }
   }
 
   &:active {
-    box-shadow: none;
-    opacity: 0.3;
-  }
+    svg path {
+      fill: ${({ theme }) => theme.color.warmLight30};
+    }
 
-  &:hover svg {
-    path {
-      fill: ${({ theme }) => theme.color.warmLight};
+    span {
+      color: ${({ theme }) => theme.color.white30}
     }
   }
 `
 const SearchIcon = styled(SearchSvg)``;
 
 const FavoritesIcon = styled(FavoritesSvg)``;
+
+const FavoritesCounter = styled.span`
+  position: absolute;
+  width: 19px;
+  height: 19px;
+  color: ${({ theme }) => theme.color.white};
+  background-color: ${({ theme }) => theme.color.neutralLight};
+  font-size: ${({ theme }) => theme.font.extraMini};
+  line-height: ${({ theme }) => theme.font.extraMini};
+  letter-spacing: -1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  top: 0;
+  right: 0;
+`;
 
 
 export {
@@ -133,4 +168,5 @@ export {
   LinkIcon,
   SearchIcon,
   FavoritesIcon,
+  FavoritesCounter,
 };

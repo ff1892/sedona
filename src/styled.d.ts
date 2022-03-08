@@ -9,7 +9,9 @@ declare module 'styled-components' {
       gray: string;
       light: string;
       white: string;
+      white30: string;
       warmLight: string;
+      warmLight30: string;
       warmDark: string;
       neutralLight: string;
       neutralDark: string;
@@ -23,6 +25,7 @@ declare module 'styled-components' {
     };
 
     font: {
+      extraMini: string;
       mini: string;
       extraSmall: string;
       small: string;
