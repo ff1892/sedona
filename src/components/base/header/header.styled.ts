@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { ReactComponent as SearchSvg } from '../../../assets/img/icons/icon-search.svg';
 import { ReactComponent as FavoritesSvg } from '../../../assets/img/icons/icon-favorites.svg';
-import { ButtonWarm } from '../../ui-kit/button/button.styled';
+import { ButtonWarm } from '../../ui-kit/button.styled';
 
 type NavLinkProps = {
   isActive?: boolean,
@@ -74,6 +74,7 @@ const LogoLink = styled(Link)`
   height: 70px;
   outline: none;
   border-radius: 10px;
+  z-index: 10;
 
   &:focus {
     outline: ${({ theme }) => theme.color.coolLight} solid 3px;

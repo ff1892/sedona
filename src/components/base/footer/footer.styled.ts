@@ -6,7 +6,7 @@ import { ReactComponent as AcademyLogo } from '../../../assets/img/logos/logo-ht
 
 const Footer = styled.footer`
   flex-shrink: 0;
-  padding: 30px 50px;
+  padding: 25px 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;

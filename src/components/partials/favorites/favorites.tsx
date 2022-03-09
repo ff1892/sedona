@@ -5,7 +5,7 @@ import VillasAtPocoDiablo from '../../../assets/img/hotel-2-small.jpg';
 
 function Favorites () {
   return (
-    <S.Favorites className="visually-hidden">
+    <S.Favorites isVisible={false}>
       <S.FavoritesContainer>
         <S.FavoritesList>
           <FavoritesItem

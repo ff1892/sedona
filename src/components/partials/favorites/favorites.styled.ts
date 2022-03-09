@@ -1,7 +1,13 @@
 import styled from 'styled-components';
-import { ButtonWarm } from '../../ui-kit/button/button.styled';
+import { ButtonWarm } from '../../ui-kit/button.styled';
 
-const Favorites = styled.section`
+type FavoritesProps = {
+  isVisible: boolean;
+};
+
+const Favorites = styled.section.attrs<FavoritesProps>(({ isVisible }) => ({
+  className: isVisible ? '' : 'visually-hidden',
+})) <FavoritesProps>`
   position: absolute;
   bottom: -265px;
   right: -10px;
