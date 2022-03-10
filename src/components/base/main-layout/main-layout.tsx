@@ -13,7 +13,7 @@ function MainLayout(): JSX.Element {
       <Hero />
       <Features />
       <MainSearch />
-      <Subscribe />
+      <Subscribe hasBackground/>
     </S.Main>
   );
 }

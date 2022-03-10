@@ -29,3 +29,20 @@ export const ButtonWarm = styled(ButtonColor)`
     color: ${({ theme }) => theme.color.white30};
   }
 `
+
+export const ButtonCold = styled(ButtonColor)`
+  background-color: ${({ theme }) => theme.color.coolLight};
+
+   &:hover {
+    background-color: ${({ theme }) => theme.color.coolDark};
+  }
+
+  &:focus {
+    outline: ${({ theme }) => theme.color.warmLight} solid 3px;
+  }
+
+  &:active {
+    outline: none;
+    color: ${({ theme }) => theme.color.white30};
+  }
+`
