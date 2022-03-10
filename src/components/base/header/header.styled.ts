@@ -2,7 +2,10 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { ReactComponent as SearchSvg } from '../../../assets/img/icons/icon-search.svg';
 import { ReactComponent as FavoritesSvg } from '../../../assets/img/icons/icon-favorites.svg';
-import { ButtonWarm } from '../../ui-kit/button.styled';
+import { ButtonWarm } from '../../ui-kit-styled/button.styled';
+import { TextLinkStyleBlack, IconLinkStyleWarm } from '../../ui-kit-styled/link.styled';
+
+
 
 type NavLinkProps = {
   isActive?: boolean,
@@ -16,7 +19,7 @@ const Header = styled.header`
 const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 13px 71px 13px 59px;
+  padding: 13px 52px 13px 59px;
 `;
 
 const NavLink = styled(Link)<NavLinkProps>`
@@ -27,20 +30,7 @@ const NavLink = styled(Link)<NavLinkProps>`
   position: relative;
   border-radius: 10px;
 
-  &:hover {
-    color: ${({ theme }) => theme.color.warmLight}
-  }
-
-  &:focus {
-    outline: ${({ theme }) => theme.color.coolLight} solid 3px;
-    outline-offset: -3px;
-    color: ${({ theme }) => theme.color.warmLight}
-  }
-
-  &:active {
-    outline: none;
-    color: ${({ theme }) => theme.color.warmLight30}
-  }
+  ${TextLinkStyleBlack}
 
   ${({ isActive, theme }) => isActive && `
     &::before {
@@ -89,13 +79,12 @@ const LogoLink = styled(Link)`
 const LogoImage = styled.img``;
 
 const HeaderInfo = styled.div`
-  position: relative;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 
   > *:not(:first-child) {
-    margin-left: 10px;
+    margin-right: 21px;
   }
 `;
 
@@ -111,30 +100,23 @@ const LinkIcon = styled(Link)`
   justify-content: center;
   align-items: center;
   border-radius: 10px;
+  ${IconLinkStyleWarm}
 
-  &:hover svg path {
-      fill: ${({ theme }) => theme.color.warmLight};
+  &:active span {
+      color: ${({ theme }) => theme.color.white30};
   }
 
-  &:focus {
-    outline: ${({ theme }) => theme.color.coolLight} solid 3px;
-    outline-offset: -3px;
+  ::before {
+    position: absolute;
+    content: '';
+    width: 80px;
+    height: 20px;
+    background: transparent;
+    bottom: -10px;
 
-    svg path {
-      fill: ${({ theme }) => theme.color.warmLight};
-    }
-  }
-
-  &:active {
-    svg path {
-      fill: ${({ theme }) => theme.color.warmLight30};
-    }
-
-    span {
-      color: ${({ theme }) => theme.color.white30}
-    }
   }
 `
+
 const SearchIcon = styled(SearchSvg)``;
 
 const FavoritesIcon = styled(FavoritesSvg)``;
@@ -155,7 +137,6 @@ const FavoritesCounter = styled.span`
   top: 0;
   right: 0;
 `;
-
 
 export {
   Header,

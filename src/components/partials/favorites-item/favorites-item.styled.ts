@@ -7,10 +7,6 @@ const FavoritesItem = styled.li`
   list-style: none;
   display: flex;
   justify-content: space-between;
-
-  &:not(:last-child) {
-    margin-bottom: 25px;
-  }
 `;
 
 const FavoritesLink = styled(Link)`
@@ -83,7 +79,7 @@ const DeleteButton = styled.button.attrs({
     outline-offset: -3px;
   }
 
-  &: active {
+  &:active {
     outline: none;
     opacity: 0.1;
   }

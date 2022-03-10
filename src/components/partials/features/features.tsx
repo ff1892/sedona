@@ -19,34 +19,34 @@ function Features() {
         color={theme.color.white}
         header='Настоящий городок'
         order='1'
-        text='Седона — не аттракцион для туристов, там течёт своя жизнь'
+        text={`Седона — не аттракцион  \n для туристов, там течёт \n своя жизнь`}
       />
       <S.FeatureBackground image={backgroundCity} />
       <Advantage
         background={theme.color.coolLight12}
         header='Жильё'
-        text='Рекомендуем пожить в настоящем мотеле, всё как в кино!'>
+        text={`Рекомендуем пожить \n в настоящем мотеле, \n всё как в кино!`}>
         <IconHouse />
       </Advantage>
       <Advantage
         background={theme.color.white}
         header='Еда'
-        text='Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!'>
+        text={`Всегда заказывайте \n топовый фирменный бургер, вы не разочаруетесь!`}>
         <IconBurger />
       </Advantage>
       <Advantage
         background={theme.color.coolLight12}
         header='Сувениры'
-        text='Не только китайского, но и настоящего местного производства!'>
+        text={`Не только китайского, \n но и настоящего местного производства!`}>
         <IconSouvenir />
       </Advantage>
       <S.FeatureBackground image={backgroundNature} />
       <FeatureItem
         background={theme.color.coolLight}
         color={theme.color.white}
-        header='Там есть мост дьявола'
+        header={`Там есть \n мост дьявола`}
         order='2'
-        text='Да, по нему можно пройти! Если вы осмелитесь, разумеется'
+        text={`Да, по нему можно пройти! \n Если вы осмелитесь, \n разумеется`}
       />
       <FeatureItem
         background={theme.color.coolLight12}

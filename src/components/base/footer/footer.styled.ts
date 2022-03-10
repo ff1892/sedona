@@ -3,10 +3,11 @@ import { ReactComponent as TwitterSvg } from '../../../assets/img/icons/social-t
 import { ReactComponent as FacebookSvg } from '../../../assets/img/icons/social-facebook.svg';
 import { ReactComponent as YoutubeSvg } from '../../../assets/img/icons/social-youtube.svg';
 import { ReactComponent as AcademyLogo } from '../../../assets/img/logos/logo-htmlacademy.svg';
+import { TextLinkStyleBlack, IconLinkStyleBlack, IconLinkStyleCool } from '../../ui-kit-styled/link.styled';
 
 const Footer = styled.footer`
   flex-shrink: 0;
-  padding: 25px 50px;
+  padding: 22px 50px 25px 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -16,7 +17,7 @@ const SocialsContainer = styled.div`
   display: flex;
 
   > *:not(:last-child) {
-    margin-right: 10px;
+    margin-right: 5px;
   }
 `;
 
@@ -30,34 +31,7 @@ const SocialLink = styled.a.attrs({
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-
-  svg path {
-    fill: ${({ theme }) => theme.color.coolLight}
-  }
-
-  &:hover {
-    svg path {
-      fill: ${({ theme }) => theme.color.coolDark};
-    }
-  }
-
-  &:focus {
-    outline: ${({ theme }) => theme.color.coolLight} solid 3px;
-    outline-offset: -3px;
-
-    svg path {
-      fill: ${({ theme }) => theme.color.coolDark};
-    }
-  }
-
-  &:active {
-    outline: none;
-    opacity: 0.3;
-
-    svg path {
-      fill: ${({ theme }) => theme.color.coolDark};
-    }
-  }
+  ${IconLinkStyleCool}
 `;
 
 const TwitterIcon = styled(TwitterSvg)``;
@@ -70,21 +44,8 @@ const Phone = styled.a`
   font-size: ${({ theme }) => theme.font.large};
   line-height: ${({ theme }) => theme.font.large};
   border-radius: 10px;
-
-  &:hover {
-    color: ${({ theme }) => theme.color.warmLight};
-  }
-
-  &:focus {
-    color: ${({ theme }) => theme.color.warmLight};
-    outline: ${({ theme }) => theme.color.coolLight} solid 3px;
-    outline-offset: -3px;
-  }
-
-  &:active {
-    outline: none;
-    opacity: 0.3;
-  }
+  margin-left: 20px;
+  ${TextLinkStyleBlack}
 `;
 
 const LogoLink = styled.a`
@@ -94,30 +55,7 @@ const LogoLink = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
-
-  &:hover {
-    svg path {
-    fill: ${({ theme }) => theme.color.warmLight};
-    }
-  }
-
-  &:focus {
-    outline: ${({ theme }) => theme.color.coolLight} solid 3px;
-    outline-offset: -3px;
-
-    svg path {
-      fill: ${({ theme }) => theme.color.warmLight};
-    }
-  }
-
-  &:active {
-    outline: none;
-    opacity: 0.3;
-
-    svg path {
-      fill: ${({ theme }) => theme.color.warmLight};
-    }
-  }
+  ${IconLinkStyleBlack}
 `
 
 const Logo = styled(AcademyLogo)``;

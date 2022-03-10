@@ -1,24 +1,25 @@
 import styled from 'styled-components';
-import { HeaderMedium, TextSemibase } from '../../ui-kit/text.styled';
-import { ButtonWarm } from '../../ui-kit/button.styled';
+import { HeaderMedium, TextSemibase } from '../../ui-kit-styled/text.styled';
+import { ButtonWarm } from '../../ui-kit-styled/button.styled';
 
 const MainSearch = styled.section`
   text-align: center;
-  padding: 91px 303px;
+  padding: 89px 303px;
 `;
 
 const MainSearchHeader = styled(HeaderMedium)`
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 `;
 
 const MainSearchText = styled(TextSemibase)`
-  margin-bottom: 53px;
+  margin-bottom: 58px;
 `;
 
 const MainSearchButton = styled(ButtonWarm)`
   display: inline-block;
-  padding: 13px 150px 17px;
+  padding: 18px 150px 25px;
   border-radius: 10px;
+  font-size: ${({ theme }) => theme.font.small};
 `;
 
 export {

@@ -5,6 +5,7 @@ declare module 'styled-components' {
 
     color: {
       black: string;
+      black25: string;
       dark: string;
       gray: string;
       light: string;
@@ -16,9 +17,11 @@ declare module 'styled-components' {
       neutralLight: string;
       neutralDark: string;
       coolLight: string;
-      coolDark: string;
+      coolLight30: string;
       coolLight20: string;
       coolLight12: string;
+      coolDark: string;
+      coolDark30: string;
       error: string;
       warn: string;
       success: string;

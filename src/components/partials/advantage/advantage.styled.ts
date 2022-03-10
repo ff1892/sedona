@@ -11,10 +11,12 @@ const Advantage = styled.div<AdvantageItemProps>`
   background-color: ${({ background }) => background};
   color: ${({ theme }) => theme.color.black};
   text-align: center;
-  padding: 95px 90px 20px;
+  padding: 90px 85px 20px;
 `;
 
 const AdvantageIconWrapper = styled.div`
+  margin-bottom: 10px;
+  height: 82px;
   svg path {
     fill: ${({ theme }) => theme.color.coolLight};
   }
@@ -23,11 +25,14 @@ const AdvantageIconWrapper = styled.div`
 const AdvantageHeader = styled.h3`
   font-size: ${({ theme }) => theme.font.base};
   text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 10px;
 `;
 
 const AdvantageText = styled.p`
   font-size: ${({ theme }) => theme.font.extraSmall};
   line-height: 21px;
+  white-space: pre-line;
 `;
 
 export {

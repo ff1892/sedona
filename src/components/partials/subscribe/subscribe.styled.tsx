@@ -1,6 +1,6 @@
 import styled, {css} from 'styled-components';
-import { HeaderMedium, TextSemibase } from '../../ui-kit/text.styled';
-import { ButtonCold } from '../../ui-kit/button.styled';
+import { HeaderMedium, TextSemibase } from '../../ui-kit-styled/text.styled';
+import { ButtonCold } from '../../ui-kit-styled/button.styled';
 import subscribeBackground from '../../../assets/img/subscribe-background.jpg';
 
 type SubscribeProps = {
@@ -17,7 +17,7 @@ const Subscribe = styled.section<SubscribeProps>`
   text-align: center;
   background-color: ${({ hasBackground, theme }) =>
     hasBackground ? theme.color.coolDark : theme.color.white};
-  padding: 94px 20px ;
+  padding: 95px 20px;
 
   ${({ hasBackground }) =>
     hasBackground && css`
@@ -33,7 +33,7 @@ const SubscribeHeader = styled(HeaderMedium)`
 `;
 
 const SubscribeText = styled(TextSemibase)`
-  margin-bottom: 44px;
+  margin-bottom: 45px;
 `;
 
 const SubscribeForm = styled.form.attrs({
@@ -95,7 +95,9 @@ const SubscribeButton = styled(ButtonCold).attrs({
   border: none;
   display: inline-block;
   border-radius: 0 10px 10px 0;
-  padding: 20px 35px;
+  padding: 20px 35px 20px 25px;
+  font-size: ${({ theme }) => theme.font.extraSmall};
+  letter-spacing: 0;
 
   &:active ~ input {
     background-color: ${({ theme }) => theme.color.white};

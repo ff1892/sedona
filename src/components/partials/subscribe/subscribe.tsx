@@ -1,4 +1,4 @@
-import * as S from './subscribe.style';
+import * as S from './subscribe.styled';
 
 type SubscribeProps = {
   hasBackground: boolean;

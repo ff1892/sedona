@@ -9,4 +9,5 @@ export const PageContainer = styled.div`
   min-height: 100vh;
   min-height: calc(100 * var(--vh, 1vh));
   overflow: hidden;
+  box-shadow: 0 4px 4px 0 ${({ theme }) => theme.color.black25};
 `;
