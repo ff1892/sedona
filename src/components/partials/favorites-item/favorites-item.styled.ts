@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { ReactComponent as DeleteSvg } from '../../../assets/img/icons/icon-delete.svg';
+import { ImageLinkStyle } from '../../ui-kit-styled/link.styled';
 
 const FavoritesItem = styled.li`
   margin: 0;
@@ -18,19 +19,7 @@ const FavoritesLink = styled(Link)`
     margin-right: 17px;
   }
 
-  &:hover {
-    opacity: 0.6;
-  }
-
-  &:focus {
-    opacity: 1;
-    outline:${({ theme }) => theme.color.coolLight} solid 3px;
-  }
-
-  &:active {
-    outline: none;
-    opacity: 0.1;
-  }
+  ${ImageLinkStyle}
 `;
 
 const FavoritesImage = styled.img.attrs({

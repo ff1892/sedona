@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 
-const Main = styled.main`
-  flex-grow: 1;
-`;
+const Main = styled.main``;
 
 export { Main };

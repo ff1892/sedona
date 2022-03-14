@@ -7,7 +7,7 @@ type FavoritesProps = {
 
 const Favorites = styled.section.attrs<FavoritesProps>(({ isVisible }) => ({
   className: isVisible ? '' : 'visually-hidden',
-})) <FavoritesProps>`
+}))<FavoritesProps>`
   position: absolute;
   z-index: 10;
   bottom: -245px;

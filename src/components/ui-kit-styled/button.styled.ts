@@ -10,7 +10,7 @@ type ButtonProps = {
 }
 
 export const ButtonColor = styled(Link)`
-  display: block;
+  display: inline-block;
   padding: 9px;
   text-align: center;
   text-transform: uppercase;
@@ -58,4 +58,63 @@ export const ButtonCold = styled(ButtonColor)`
     outlineColor: theme.color.warmLight,
     ghostColor: theme.color.white30,
   })}
+`;
+
+export const ButtonColdCatalog = styled(ButtonColor)`
+  ${ButtonStyle({
+    primaryColor: theme.color.coolLight,
+    secondaryColor: theme.color.coolDark,
+    outlineColor: theme.color.warmLight,
+    ghostColor: theme.color.white30,
+  })}
+
+  &:hover {
+    outline: ${theme.color.warmLight} solid 1px;
+    outline-offset: -1px;
+  }
+
+  &:active {
+    outline: ${theme.color.warmLight} solid 1px;
+    outline-offset: -1px;
+  }
+`;
+
+export const ButtonColdFilter = styled(ButtonColor)`
+  ${ButtonStyle({
+    primaryColor: theme.color.coolLight,
+    secondaryColor: theme.color.coolDark,
+    outlineColor: theme.color.white,
+    ghostColor: theme.color.white30,
+  })}
+`;
+
+export const ButtonNeutral = styled(ButtonColor)`
+  ${ButtonStyle({
+  primaryColor: theme.color.neutralLight,
+  secondaryColor: theme.color.neutralDark,
+  outlineColor: theme.color.warmLight,
+  ghostColor: theme.color.white30,
+})}
+`;
+
+export const ButtonIconBlack = styled.button`
+  width: 48px;
+  height: 48px;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  box-shadow: inset 0 0 0 2px ${({ theme }) => theme.color.gray};
+  background-color: ${({ theme }) => theme.color.white};
+
+  &:hover {
+    box-shadow: inset 0 0 0 2px ${({ theme }) => theme.color.coolLight};
+  }
+
+  &:focus {
+    box-shadow: inset 0 0 0 2px ${({ theme }) => theme.color.coolLight};
+  }
+
+  &:active {
+    box-shadow: inset 0 0 0 2px ${({ theme }) => theme.color.black};
+  }
 `;

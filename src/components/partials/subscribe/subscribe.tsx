@@ -1,10 +1,10 @@
 import * as S from './subscribe.styled';
 
 type SubscribeProps = {
-  hasBackground: boolean;
+  hasBackground?: boolean;
 };
 
-function Subscribe({ hasBackground }: SubscribeProps) {
+function Subscribe({ hasBackground=false }: SubscribeProps) {
   return (
     <S.Subscribe hasBackground={hasBackground}>
       <S.SubscribeHeader>

@@ -23,12 +23,13 @@ function Header(): JSX.Element {
             <S.SearchIcon />
           </S.LinkIcon>
           <S.LinkIcon
-          title="Избранное"
-          to="/"
-          onMouseEnter={() => setIsVivible(true)}
-          onMouseLeave={() => setIsVivible(false)}
-          onFocus={() => setIsVivible(true)}
-          onBlur={() => setIsVivible(false)}
+            title="Избранное"
+            as={'div'}
+            tabIndex={0}
+            onMouseEnter={() => setIsVivible(true)}
+            onMouseLeave={() => setIsVivible(false)}
+            onFocus={() => setIsVivible(true)}
+            onBlur={() => setIsVivible(false)}
           >
             <S.FavoritesIcon />
             <S.FavoritesCounter aria-label="Количество отелей в избранном">

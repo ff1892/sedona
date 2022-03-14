@@ -53,8 +53,8 @@ const IconLinkStyle = ({
   }
 
   &:focus {
-    outline: ${outlineColor} solid 3px;
-    outline-offset: -3px;
+    outline: 0;
+    box-shadow: inset 0 0 0 3px ${outlineColor};
 
     svg path {
       fill: ${secondaryColor};
@@ -62,7 +62,8 @@ const IconLinkStyle = ({
   }
 
   &:active {
-    outline: none;
+    outline: 0;
+    box-shadow: none;
     svg path {
       fill: ${ghostColor};
     }
@@ -89,3 +90,20 @@ export const IconLinkStyleBlack = IconLinkStyle({
   outlineColor: theme.color.coolLight,
   ghostColor: theme.color.warmLight30,
 });
+
+export const ImageLinkStyle = css`
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus {
+    opacity: 1;
+    outline:${({ theme }) => theme.color.coolLight} solid 3px;
+  }
+
+  &:active {
+    outline: none;
+    opacity: 0.3;
+  }
+`;

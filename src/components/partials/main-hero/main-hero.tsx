@@ -1,4 +1,4 @@
-import * as S from './hero.styled';
+import * as S from './main-hero.styled';
 
 function Hero() {
   return(

@@ -1,4 +1,4 @@
-import { PageLayout, MainLayout } from '../components';
+import { PageLayout, MainLayout } from '../../components';
 
 function MainPage(): JSX.Element {
   return (

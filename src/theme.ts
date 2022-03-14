@@ -9,6 +9,7 @@ const appTheme: DefaultTheme = {
     light: '#F2F2F2',
     white: '#FFFFFF',
     white30: 'rgba(255, 255, 255, 0.3)',
+    white60: 'rgba(255, 255, 255, 0.6)',
     warmLight: '#756257',
     warmLight30: 'rgba(117, 98, 87, 0.3)',
     warmDark: '#615048',
@@ -23,6 +24,7 @@ const appTheme: DefaultTheme = {
     error: '#FF5757',
     warn: '#FD922E',
     success: '#7DB550',
+    specialDark: '#3F5E72',
   },
 
   font: {

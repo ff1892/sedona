@@ -1,9 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from './app.styled';
 import { appTheme } from '../../theme';
-import { MainPage } from '../components';
+import { MainPage, CatalogPage } from '../components';
 
 function App(): JSX.Element {
   return (
@@ -11,7 +10,8 @@ function App(): JSX.Element {
       <ThemeProvider theme={appTheme}>
         <GlobalStyle />
           <Routes>
-            <Route path="/" element={<MainPage />}/>
+            <Route path="/catalog" element={<MainPage />}/>
+            <Route path="/" element={<CatalogPage />}/>
           </Routes>
       </ThemeProvider>
     </BrowserRouter>

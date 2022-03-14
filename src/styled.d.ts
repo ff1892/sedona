@@ -11,6 +11,7 @@ declare module 'styled-components' {
       light: string;
       white: string;
       white30: string;
+      white60: string;
       warmLight: string;
       warmLight30: string;
       warmDark: string;
@@ -25,6 +26,7 @@ declare module 'styled-components' {
       error: string;
       warn: string;
       success: string;
+      specialDark: string;
     };
 
     font: {

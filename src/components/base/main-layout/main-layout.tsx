@@ -1,6 +1,6 @@
 import * as S from './main-layout.styled';
 import {
-  Hero,
+  MainHero,
   Features,
   MainSearch,
   Subscribe
@@ -10,7 +10,7 @@ function MainLayout(): JSX.Element {
 
   return (
     <S.Main>
-      <Hero />
+      <MainHero />
       <Features />
       <MainSearch />
       <Subscribe hasBackground/>
