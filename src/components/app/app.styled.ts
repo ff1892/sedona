@@ -78,6 +78,11 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
   }
 
+  ul, li {
+    margin: 0;
+    padding: 0;
+  }
+
   a {
     color: ${({ theme }) => theme.color.black};
     text-decoration: none;

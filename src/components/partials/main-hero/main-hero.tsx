@@ -1,11 +1,13 @@
 import * as S from './main-hero.styled';
 
-function Hero() {
+function MainHero() {
   return(
     <S.Hero>
-      <S.LogoContainer />
+      <S.PageTitle>
+        Седона &mdash; живописный городок в Аризоне
+      </S.PageTitle>
     </S.Hero>
   );
 }
 
-export default Hero;
+export default MainHero;

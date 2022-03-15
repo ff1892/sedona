@@ -5,15 +5,19 @@ type RadioProps = {
   inputValue: string,
   inputId: string,
   labelName: string,
+  isChecked?: boolean,
 };
 
-function Radio({ inputName, inputValue, inputId, labelName }: RadioProps): JSX.Element {
+function Radio({
+    inputName, inputValue, inputId, labelName, isChecked
+  }: RadioProps): JSX.Element {
   return (
     <S.InputContainer>
       <S.Input
         inputName={inputName}
         inputValue={inputValue}
-        inputId={inputId}/>
+        inputId={inputId}
+        isChecked={isChecked}/>
       <S.Label inputId={inputId}>{ labelName}</S.Label>
     </S.InputContainer>
   );

@@ -5,18 +5,13 @@ import { ReactComponent as FavoritesSvg } from '../../../assets/img/icons/icon-f
 import { ButtonWarm } from '../../ui-kit-styled/button.styled';
 import { TextLinkStyleBlack, IconLinkStyleWarm } from '../../ui-kit-styled/link.styled';
 
-
-
 type NavLinkProps = {
-  isActive?: boolean,
+  isCurrent?: boolean,
 };
 
 const Header = styled.header`
   position: relative;
   flex-shrink: 0;
-`;
-
-const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 13px 52px 13px 59px;
@@ -32,7 +27,7 @@ const NavLink = styled(Link)<NavLinkProps>`
 
   ${TextLinkStyleBlack}
 
-  ${({ isActive, theme }) => isActive && `
+  ${({ isCurrent, theme }) => isCurrent && `
     &::before {
       position: absolute;
       content: '';
@@ -92,6 +87,11 @@ const HeaderOrder = styled(ButtonWarm)`
   min-width: 160px;
 `;
 
+const LinkIconWrapper = styled.div`
+  position: relative;
+  display: inline-block;
+`;
+
 const LinkIcon = styled(Link)`
   position: relative;
   display: block;
@@ -109,10 +109,10 @@ const LinkIcon = styled(Link)`
   ::before {
     position: absolute;
     content: '';
-    width: 80px;
-    height: 20px;
+    width: 60px;
+    height: 25px;
     background: transparent;
-    bottom: -10px;
+    bottom: -15px;
 
   }
 `
@@ -140,13 +140,13 @@ const FavoritesCounter = styled.span`
 
 export {
   Header,
-  HeaderContainer,
   HeaderNav,
   NavLink,
   LogoLink,
   LogoImage,
   HeaderInfo,
   HeaderOrder,
+  LinkIconWrapper,
   LinkIcon,
   SearchIcon,
   FavoritesIcon,

@@ -13,28 +13,25 @@ import {
 } from '../../ui-kit-styled/button.styled';
 
 const ButtonStyle = css`
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 160px;
-  height: 37px;
+  padding: 9px 31px;
+  min-height: 37px;
 `;
 
 const CatalogCard = styled.li`
-  margin: 0;
   list-style: none;
   display: grid;
   grid-template-columns: max-content max-content auto max-content;
-  grid-template-rows: repeat(3, auto);
+  grid-template-rows: min-content 1fr min-content;
   grid-column-gap: 8px;
-  padding: 25px 0 30px;
+  padding: 20px 0 30px;
   border-bottom: 1px solid ${({ theme }) => theme.color.gray};
 
   .stars-rating {
     grid-column: 4/5;
-    grid-row: 1/2;
+    grid-row: 1/3;
     justify-self: center;
-    align-self: center;
+    align-self: start;
+    padding-top: 10px;
   }
 `;
 
@@ -43,14 +40,14 @@ const CardImgLink = styled(Link)`
   grid-column: 1/2;
   grid-row: 1/4;
   margin-right: 16px;
-  padding-top: 3px;
+  padding-top: 10px;
   ${ImageLinkStyle}
 `;
 
 const CardImg = styled.img``;
 
 const CardTitle = styled(Link)`
-  padding: 8px 15px;
+  padding: 7px 15px;
   border-radius: 10px;
   display: inline-block;
   font-size: ${({ theme }) => theme.font.base};
@@ -63,7 +60,6 @@ const CardTitle = styled(Link)`
 `;
 
 const CardType = styled.p`
-  margin: 0;
   margin-left: 16px;
   grid-column: 2/3;
   grid-row: 2/3;
@@ -78,7 +74,7 @@ const CardMinPrice = styled(CardType)`
 `;
 
 const ButtonMoreInfo = styled(ButtonWarm)`
-  margin-left: 16px;
+  margin-left: 11px;
   grid-column: 2/3;
   grid-row: 3/4;
   align-self: end;
@@ -88,6 +84,7 @@ const ButtonToFavorites = styled(ButtonColdCatalog)`
   grid-column: 3/4;
   grid-row: 3/4;
   align-self: end;
+  margin-right: auto;
   ${ButtonStyle}
 `;
 
@@ -95,13 +92,13 @@ const ButtonInFavorites = styled(ButtonNeutral)`
   grid-column: 3/4;
   grid-row: 3/4;
   align-self: end;
+  margin-right: auto;
   ${ButtonStyle}
 `;
 
 const Rating = styled.p`
-  margin: 0;
   width: 160px;
-  height: 37px;
+  min-height: 37px;
   display: inline-flex;
   justify-content: center;
   align-items: center;

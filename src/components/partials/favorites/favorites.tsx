@@ -3,14 +3,15 @@ import { FavoritesItem } from '../../components';
 import DesertQuailInn from '../../../assets/img/hotel-1-small.jpg';
 import VillasAtPocoDiablo from '../../../assets/img/hotel-2-small.jpg';
 
-type FavoritesProps = {
-  isVisible: boolean,
+type FavoriteProps = {
+  onFocus?: () => void,
+  onBlur?: () => void,
 };
 
-function Favorites ({ isVisible }: FavoritesProps) {
+function Favorites (props: FavoriteProps) {
 
   return (
-    <S.Favorites isVisible={isVisible}>
+    <S.Favorites>
       <S.FavoritesContainer>
         <S.FavoritesList>
           <FavoritesItem

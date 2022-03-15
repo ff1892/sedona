@@ -5,15 +5,17 @@ type CheckboxProps = {
   inputValue: string,
   inputId: string,
   labelName: string,
+  isChecked?: boolean,
 };
 
-function Checkbox({ inputName, inputValue, inputId, labelName }: CheckboxProps): JSX.Element {
+function Checkbox({ inputName, inputValue, inputId, labelName, isChecked }: CheckboxProps): JSX.Element {
   return(
     <S.InputContainer>
       <S.Input
         inputName={inputName}
         inputValue={inputValue}
-        inputId={inputId}/>
+        inputId={inputId}
+        isChecked={isChecked} />
       <S.Label inputId={inputId}>{ labelName }</S.Label>
     </S.InputContainer>
   );

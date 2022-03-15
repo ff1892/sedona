@@ -1,19 +1,17 @@
 import * as S from './advantage.styled';
-import { ReactNode } from 'react';
 
 type AdvantageItemProps = {
   background: string;
   header: string;
   text: string;
-  children: ReactNode;
+  icon: string;
 };
 
-function Advantage({ background, header, text, children }: AdvantageItemProps) {
+function Advantage({ background, header, text, icon }: AdvantageItemProps) {
+
   return (
     <S.Advantage background={background}>
-      <S.AdvantageIconWrapper>
-      { children }
-      </S.AdvantageIconWrapper>
+      <S.IconWrapper backgroundSrc={icon} />
       <S.AdvantageHeader>{header}</S.AdvantageHeader>
       <S.AdvantageText>{text}</S.AdvantageText>
     </S.Advantage>

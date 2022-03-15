@@ -1,16 +1,11 @@
 import styled from 'styled-components';
 import { ButtonWarm } from '../../ui-kit-styled/button.styled';
 
-type FavoritesProps = {
-  isVisible: boolean;
-};
 
-const Favorites = styled.section.attrs<FavoritesProps>(({ isVisible }) => ({
-  className: isVisible ? '' : 'visually-hidden',
-}))<FavoritesProps>`
+const Favorites = styled.div`
   position: absolute;
   z-index: 10;
-  bottom: -245px;
+  bottom: -253px;
   right: -180px;
   width: 400px;
   border-radius: 20px;
@@ -35,16 +30,20 @@ const FavoritesContainer = styled.div`
 `;
 
 const FavoritesList = styled.ul`
-  margin: 0;
   padding: 15px 15px 20px;
   border: 1px solid ${({ theme }) => theme.color.gray};
   border-radius: 20px 20px 0 0;
   border-bottom: none;
+
+  li:not(:last-child) {
+    margin-bottom: 5px;
+  }
 `;
 
 const FavoritesButton = styled(ButtonWarm)`
   border-radius: 0 0 20px 20px;
-  padding: 22px 12px;
+  min-width: 400px;
+  padding: 25px 12px;
 `;
 
 export {

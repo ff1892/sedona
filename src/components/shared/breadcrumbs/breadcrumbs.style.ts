@@ -5,15 +5,16 @@ import divider from '../../../assets/img/icons/icon-nav-divider.svg';
 const Breadcrumbs = styled.div`
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 42px;
 `;
 
 const LinkWrapper=styled.div`
-  padding-right: 16px;
+  padding-right: 10px;
   position: relative;
+  left: -7px;
 
   &:not(:last-child) {
-    margin-right: 5px;
+    margin-right: 3px;
 
     &::before {
       position: absolute;

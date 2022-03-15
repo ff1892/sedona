@@ -3,7 +3,7 @@ import backgroundImage from '../../../assets/img/index-background.jpg'
 import divider from '../../../assets/img/hero-divider.svg'
 import logo from '../../../assets/img/logos/logo-hero.svg';
 
-const Hero = styled.section`
+const Hero = styled.div`
   background-color: ${({theme}) => theme.color.coolDark};
   height: 485px;
   position: relative;
@@ -19,16 +19,24 @@ const Hero = styled.section`
     left: 0;
     background: url(${divider});
   }
+
+  &::after {
+    position: absolute;
+    content: '';
+    width: 458px;
+    height: 352px;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(${logo}) no-repeat bottom;
+  }
 `
 
-const LogoContainer = styled.div`
-  margin: 0 auto;
-  width: 458px;
-  height: 352px;
-  background: url(${logo}) no-repeat center center;
-`;
+const PageTitle = styled.h1.attrs({
+  className: 'visually-hidden',
+})``;
 
 export {
   Hero,
-  LogoContainer,
+  PageTitle,
 }

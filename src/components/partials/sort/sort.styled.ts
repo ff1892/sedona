@@ -14,11 +14,13 @@ const Sort = styled.section`
   margin-bottom: 40px;
 
   select {
-    padding: 15px 127px 15px 19px;
+    padding: 15px 90px 15px 19px;
   }
 `;
 
-const SortHeader = styled(HeaderMedium)``;
+const SortHeader = styled(HeaderMedium)`
+  margin-right: 120px;
+`;
 
 const ButtonsWrapper = styled.div`
   > * {

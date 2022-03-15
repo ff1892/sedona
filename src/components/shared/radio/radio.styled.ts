@@ -4,6 +4,7 @@ type InputProps = {
   inputName: string;
   inputValue: string;
   inputId: string,
+  isChecked?: boolean,
 };
 
 type LabelProps = {
@@ -12,12 +13,15 @@ type LabelProps = {
 
 const InputContainer = styled.div``;
 
-const Input = styled.input.attrs<InputProps>(({ inputName, inputValue, inputId }) => ({
+const Input = styled.input.attrs<InputProps>(({
+    inputName, inputValue, inputId, isChecked
+  }) => ({
   className: 'visually-hidden',
   type: 'radio',
   name: inputName,
   value: inputValue,
   id: inputId,
+  checked: isChecked,
 })) <InputProps>`
 
   &:checked+label::after {

@@ -12,12 +12,12 @@ function Pagination(): JSX.Element {
   return (
     <S.Pagination>
       <S.PaginationWrapper>
-        <S.PageButton to="/" isCurrent>1</S.PageButton>
-        <S.PageButton to="/">2</S.PageButton>
-        <S.PageButton to="/">3</S.PageButton>
-        <S.PageButton to="/">4</S.PageButton>
-        <S.PageButton to="/" >...</S.PageButton>
-        <S.PageButton to="/">10</S.PageButton>
+        <S.PageButton to="#" isCurrent>1</S.PageButton>
+        <S.PageButton to="#">2</S.PageButton>
+        <S.PageButton to="#">3</S.PageButton>
+        <S.PageButton to="#">4</S.PageButton>
+        <S.PageButton to="#" >...</S.PageButton>
+        <S.PageButton to="#">10</S.PageButton>
       </S.PaginationWrapper>
       <S.SelectWrapper>
         <S.SelectLabel>

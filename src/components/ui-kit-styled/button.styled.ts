@@ -10,9 +10,10 @@ type ButtonProps = {
 }
 
 export const ButtonColor = styled(Link)`
-  display: inline-block;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   padding: 9px;
-  text-align: center;
   text-transform: uppercase;
   font-size: ${({ theme }) => theme.font.mini};
   line-height: 18px;

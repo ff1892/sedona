@@ -16,7 +16,7 @@ function Select({ selectName, options }: SelectProps) {
     <S.SelectWrapper>
       <S.Select name={selectName}>
         { options.map(({ value, label }) =>
-          <S.Option value={value}>{label}</S.Option>) }
+          <S.Option value={value} key={value}>{label}</S.Option>) }
       </S.Select>
     </S.SelectWrapper>
   );

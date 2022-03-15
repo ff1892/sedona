@@ -16,14 +16,15 @@ const Subscribe = styled.section<SubscribeProps>`
     hasBackground ? theme.color.white : theme.color.black};
   text-align: center;
   background-color: ${({ hasBackground, theme }) =>
-    hasBackground ? theme.color.coolDark : theme.color.white};
-  padding: 95px 20px;
+    hasBackground ? theme.color.neutralDark : theme.color.white};
+  padding: 89px 29px 135px;
 
   ${({ hasBackground }) =>
     hasBackground && css`
       background-image: url(${subscribeBackground});
       background-repeat: no-repeat;
       background-size: cover;
+      padding: 94px 29px;
     `
   }
 `;
@@ -33,11 +34,12 @@ const SubscribeHeader = styled(HeaderMedium)`
 `;
 
 const SubscribeText = styled(TextSemibase)`
-  margin-bottom: 45px;
+  max-width: 500px;
+  margin: 0 auto 47px;
 `;
 
 const SubscribeForm = styled.form.attrs({
-  action: 'https://echo.htmlacademy.ru/',
+  action: '#',
   method: 'post',
 })`
   display: flex;
@@ -93,7 +95,6 @@ const SubscribeButton = styled(ButtonCold).attrs({
   type: 'submit',
 })`
   border: none;
-  display: inline-block;
   border-radius: 0 10px 10px 0;
   padding: 20px 35px 20px 25px;
   font-size: ${({ theme }) => theme.font.extraSmall};

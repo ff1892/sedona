@@ -3,6 +3,7 @@ import { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from './app.styled';
 import { appTheme } from '../../theme';
 import { MainPage, CatalogPage } from '../components';
+import { AppRoute } from '../constants';
 
 function App(): JSX.Element {
   return (
@@ -10,8 +11,8 @@ function App(): JSX.Element {
       <ThemeProvider theme={appTheme}>
         <GlobalStyle />
           <Routes>
-            <Route path="/catalog" element={<MainPage />}/>
-            <Route path="/" element={<CatalogPage />}/>
+            <Route path={AppRoute.Index} element={<MainPage />}/>
+            <Route path={AppRoute.Catalog} element={<CatalogPage />}/>
           </Routes>
       </ThemeProvider>
     </BrowserRouter>

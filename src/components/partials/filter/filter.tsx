@@ -20,12 +20,14 @@ function Filter(): JSX.Element {
           inputValue="бассейн"
           inputId="checkbox-pool"
           labelName="Бассейн"
+          isChecked
         />
         <Checkbox
           inputName={checkboxName}
           inputValue="парковка"
           inputId="checkbox-parking"
           labelName="Парковка"
+          isChecked
         />
         <Checkbox
           inputName={checkboxName}
@@ -35,12 +37,13 @@ function Filter(): JSX.Element {
         />
       </S.Fieldset>
       <S.Fieldset>
-        <S.Legend>Инфраструктура:</S.Legend>
+        <S.Legend>Тип жилья:</S.Legend>
         <Radio
           inputName={radioName}
           inputValue="гостиница"
           inputId="radio-hotel"
           labelName="Гостиница"
+          isChecked
         />
         <Radio
           inputName={radioName}
@@ -57,9 +60,21 @@ function Filter(): JSX.Element {
       </S.Fieldset>
       <S.Fieldset>
         <S.Legend>Стоимость, ₽:</S.Legend>
-          <PriceInput inputId="minPrice" position="left" labelName="от" />
-          <PriceInput inputId="maxPrice" position="right" labelName="до" />
-          <RangeControls min={0} max={70} />
+          <S.PriceInputWrapper>
+            <PriceInput
+              inputId="minPrice"
+              position="left"
+              labelName="от"
+              placeholderText="0"
+            />
+            <PriceInput
+              inputId="maxPrice"
+              position="right"
+              labelName="до"
+              placeholderText="9000"
+            />
+          </S.PriceInputWrapper>
+          <RangeControls min={0} max={75} />
       </S.Fieldset>
       <S.ButtonWrapper>
         <S.SubmitButton as="input" value="Применить" />

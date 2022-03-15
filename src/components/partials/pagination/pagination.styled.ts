@@ -22,9 +22,6 @@ const PaginationWrapper = styled.div`
 const PageButton = styled(ButtonCold).attrs<PageButtonProps>(({ isCurrent }) => ({
   tabIndex: isCurrent ? -1 : 0,
 }))<PageButtonProps>`
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
   width: 55px;
   height: 55px;
 
@@ -41,8 +38,8 @@ const SelectWrapper = styled.div`
   align-items: center;
 
   select {
-    padding: 15px 127px 15px 19px;
-    margin-left: 50px;
+    padding: 12px 127px 15px 19px;
+    margin-left: 55px;
   }
 `;
 

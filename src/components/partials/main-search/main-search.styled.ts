@@ -4,7 +4,7 @@ import { ButtonWarm } from '../../ui-kit-styled/button.styled';
 
 const MainSearch = styled.section`
   text-align: center;
-  padding: 89px 303px;
+  padding: 90px 303px;
 `;
 
 const MainSearchHeader = styled(HeaderMedium)`
@@ -12,12 +12,11 @@ const MainSearchHeader = styled(HeaderMedium)`
 `;
 
 const MainSearchText = styled(TextSemibase)`
-  margin-bottom: 58px;
+  margin-bottom: 60px;
 `;
 
 const MainSearchButton = styled(ButtonWarm)`
-  display: inline-block;
-  padding: 18px 150px 25px;
+  padding: 20px 150px;
   border-radius: 10px;
   font-size: ${({ theme }) => theme.font.small};
 `;

@@ -9,16 +9,6 @@ const Features = styled.section`
   flex-wrap: wrap;
 `;
 
-const FeatureBackground = styled.div<FeatureBackgroundProps>`
-  width: 800px;
-  height: 384px;
-  background-image: url(${({ image }) => image});
-  background-repeat: no-repeat;
-  background-size: cover;
-
-`;
-
 export {
   Features,
-  FeatureBackground,
 };

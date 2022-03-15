@@ -4,7 +4,6 @@ import { ReactComponent as DeleteSvg } from '../../../assets/img/icons/icon-dele
 import { ImageLinkStyle } from '../../ui-kit-styled/link.styled';
 
 const FavoritesItem = styled.li`
-  margin: 0;
   list-style: none;
   display: flex;
   justify-content: space-between;
@@ -30,15 +29,14 @@ const FavoritesImage = styled.img.attrs({
   width: 48px;
   height: 48px;
 `
-const FavoritesText = styled.div``;
+const FavoritesText = styled.div`
+`;
 
 const FavoritesTitle = styled.h3`
-  margin: 0;
   font-size: ${({ theme }) => theme.font.extraSmall};
 `;
 
 const FavoritesType = styled.p`
-  margin: 0;
   font-size: ${({ theme }) => theme.font.mini};
   line-height: ${({ theme }) => theme.font.mini};
 `;

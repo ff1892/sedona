@@ -14,7 +14,7 @@ const Select = styled.select`
   border: none;
   outline: none;
   box-shadow: inset 0 0 0 2px ${({ theme}) => theme.color.gray};
-  background: url(${iconSelect}) no-repeat 93% 50%;
+  background: url(${iconSelect}) no-repeat 90% 50%;
 
   &:hover {
     box-shadow: inset 0 0 0 2px ${({ theme }) => theme.color.coolLight};
@@ -30,7 +30,10 @@ const Select = styled.select`
   }
 `;
 
-const Option = styled.option``;
+const Option = styled.option`
+  font-size: ${({ theme }) => theme.font.extraSmall};
+  line-height: ${({ theme }) => theme.font.extraSmall};
+`;
 
 export {
   SelectWrapper,

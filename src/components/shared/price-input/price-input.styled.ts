@@ -3,15 +3,18 @@ import styled, { css } from 'styled-components';
 type PriceInputProps = {
   inputId: string;
   position: 'left' | 'right';
+  placeholderText: string,
 };
 
 type PriceLabelProps = {
   inputId: string;
 };
 
-const PriceInput = styled.input.attrs<PriceInputProps>(({ inputId }) => ({
+const PriceInput = styled.input.attrs<PriceInputProps>(({
+  inputId, placeholderText }) => ({
   type: 'number',
   id: inputId,
+  placeholder: placeholderText,
 }))<PriceInputProps>`
   position: relative;
   width: 143px;
@@ -42,6 +45,10 @@ const PriceInput = styled.input.attrs<PriceInputProps>(({ inputId }) => ({
     outline: none;
     box-shadow: none;
   }
+
+   &::placeholder {
+     color: ${({ theme }) => theme.color.white};
+   }
 
   ${({ position }) => position === 'left' && css`
     border-radius: 4px 0 0 4px;
