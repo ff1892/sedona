@@ -27,7 +27,8 @@ function Footer(): JSX.Element {
       </S.Phone>
       <S.LogoLink
         href="https://www.htmlacademy.ru/"
-        target="_blank">
+        target="_blank"
+        aria-label="Сайт HTML Academy">
         <S.Logo />
       </S.LogoLink>
     </S.Footer>

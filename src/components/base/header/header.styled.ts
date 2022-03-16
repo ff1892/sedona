@@ -71,7 +71,10 @@ const LogoLink = styled(Link)`
   }
 `;
 
-const LogoImage = styled.img``;
+const LogoImage = styled.img.attrs({
+  width: 178,
+  height: 70,
+})``;
 
 const HeaderInfo = styled.div`
   display: flex;

@@ -4,6 +4,7 @@ import { ButtonCross } from '../../ui-kit-styled/button.styled';
 import { RemoveScroll } from 'react-remove-scroll';
 import FocusLock from 'react-focus-lock';
 import { useCallback, useEffect } from 'react';
+import ReactDOM from 'react-dom';
 
 const pastDateMessage = "Мы не можем отправить вас в прошлое.";
 const availableMessage = "На эти даты есть свободные номера. Пока есть.";
@@ -27,7 +28,7 @@ function Modal({ onModalClose }: ModalProps ): JSX.Element | null {
     return () => document.removeEventListener('keydown', onEscKeyDown);
   }, [onEscKeyDown, onModalClose]);
 
-  return (
+  return ReactDOM.createPortal(
     <FocusLock>
       <RemoveScroll>
         <S.ModalOverlay onClick={onModalClose} />
@@ -72,8 +73,9 @@ function Modal({ onModalClose }: ModalProps ): JSX.Element | null {
           </S.ModalForm>
         </S.Modal>
       </RemoveScroll>
-    </FocusLock>
-  );
+    </FocusLock>,
+    document.getElementById('root-modal')!
+  )
 }
 
 export default Modal;

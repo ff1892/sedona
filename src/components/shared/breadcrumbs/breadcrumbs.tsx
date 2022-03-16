@@ -6,7 +6,8 @@ function Breadcrumbs() {
   return (
     <S.Breadcrumbs>
       <S.LinkWrapper>
-        <S.LinkIcon to={AppRoute.Index}>
+        <S.LinkIcon to={AppRoute.Index}
+          aria-label="Перейти на главную страницу">
           <IconHome />
         </S.LinkIcon>
       </S.LinkWrapper>

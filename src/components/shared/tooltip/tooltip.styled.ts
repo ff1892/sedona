@@ -31,7 +31,9 @@ const TooltipButton = styled.button`
   }
 `
 
-const TooltipInfo = styled.div`
+const TooltipInfo = styled.div.attrs({
+  role: 'tooltip',
+})`
   position: absolute;
   z-index: 10;
   bottom: -150px;

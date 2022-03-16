@@ -21,7 +21,7 @@ const Input = styled.input.attrs<InputProps>(({
   name: inputName,
   value: inputValue,
   id: inputId,
-  checked: isChecked,
+  defaultChecked: isChecked,
 })) <InputProps>`
 
   &:checked+label::after {

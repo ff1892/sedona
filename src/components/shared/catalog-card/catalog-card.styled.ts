@@ -44,7 +44,10 @@ const CardImgLink = styled(Link)`
   ${ImageLinkStyle}
 `;
 
-const CardImg = styled.img``;
+const CardImg = styled.img.attrs({
+  width: 180,
+  height: 120,
+})``;
 
 const CardTitle = styled(Link)`
   padding: 7px 15px;
