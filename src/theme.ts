@@ -3,13 +3,18 @@ import { DefaultTheme } from "styled-components";
 const appTheme: DefaultTheme = {
   color: {
     black: '#000000',
+    black15: 'rgba(0, 0, 0, 0.15)',
+    black20: 'rgba(0, 0, 0, 0.2)',
     black25: 'rgba(0, 0, 0, 0.25)',
+    black30: 'rgba(0, 0, 0, 0.3)',
+    black60: 'rgba(0, 0, 0, 0.6)',
     dark: '#333333',
     gray: '#E5E5E5',
     light: '#F2F2F2',
     white: '#FFFFFF',
     white30: 'rgba(255, 255, 255, 0.3)',
     white60: 'rgba(255, 255, 255, 0.6)',
+    white80: 'rgba(255, 255, 255, 0.8)',
     warmLight: '#756257',
     warmLight30: 'rgba(117, 98, 87, 0.3)',
     warmDark: '#615048',

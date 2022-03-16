@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { HeaderMedium, TextSemibase } from '../../ui-kit-styled/text.styled';
+import { TitleMedium, TextSemibase } from '../../ui-kit-styled/text.styled';
 
 const Intro = styled.div`
   display: flex;
@@ -10,7 +10,7 @@ const Intro = styled.div`
   padding: 60px 0 87px;
 `;
 
-const IntroHeader = styled(HeaderMedium)`
+const IntroHeader = styled(TitleMedium)`
   max-width: 700px;
   margin-bottom: 36px;
 `;

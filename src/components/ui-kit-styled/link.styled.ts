@@ -91,6 +91,13 @@ export const IconLinkStyleBlack = IconLinkStyle({
   ghostColor: theme.color.warmLight30,
 });
 
+export const IconLinkStyleCounter = IconLinkStyle({
+  primaryColor: theme.color.black30,
+  secondaryColor: theme.color.black,
+  outlineColor: theme.color.coolLight,
+  ghostColor: theme.color.black20,
+});
+
 export const ImageLinkStyle = css`
 
   &:hover {

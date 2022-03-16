@@ -5,13 +5,18 @@ declare module 'styled-components' {
 
     color: {
       black: string;
+      black15: string;
+      black20: string;
       black25: string;
+      black30: string;
+      black60: string;
       dark: string;
       gray: string;
       light: string;
       white: string;
       white30: string;
       white60: string;
+      white80: string;
       warmLight: string;
       warmLight30: string;
       warmDark: string;

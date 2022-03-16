@@ -1,6 +1,6 @@
-import { ReactNode } from 'react';
+import { ReactNode, useState } from 'react';
 import * as S from './page-layout.styled';
-import { Header, Footer } from '../../components';
+import { Header, Footer, Modal } from '../../components';
 import { useLocation } from 'react-router-dom';
 
 type PageLayoutProps = {
@@ -11,12 +11,20 @@ function PageLayout({ children }: PageLayoutProps): JSX.Element {
 
   const { pathname } = useLocation();
 
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+
   return (
-    <S.PageContainer>
-      <Header currentPage={pathname} />
-      { children }
-      <Footer />
-    </S.PageContainer>
+    <>
+      <S.PageContainer>
+        <Header
+          currentPage={pathname}
+          onModalOpen={() => setIsModalOpen(true)}
+        />
+        { children }
+        <Footer />
+      </S.PageContainer>
+      { isModalOpen && <Modal onModalClose={() => setIsModalOpen(false)}/> }
+    </>
   );
 }
 

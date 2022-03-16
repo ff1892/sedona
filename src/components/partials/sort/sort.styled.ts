@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { HeaderMedium } from '../../ui-kit-styled/text.styled';
+import { TitleMedium } from '../../ui-kit-styled/text.styled';
 import { ButtonIconBlack } from '../../ui-kit-styled/button.styled';
 
 type SortButtonProps = {
@@ -18,7 +18,7 @@ const Sort = styled.section`
   }
 `;
 
-const SortHeader = styled(HeaderMedium)`
+const SortHeader = styled(TitleMedium)`
   margin-right: 120px;
 `;
 

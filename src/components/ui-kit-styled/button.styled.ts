@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
 import { Link } from 'react-router-dom';
 import { appTheme as theme } from '../../theme';
+import iconCross from '../../assets/img/icons/icon-cross.svg';
 
 type ButtonProps = {
   primaryColor: string,
@@ -117,5 +118,44 @@ export const ButtonIconBlack = styled.button`
 
   &:active {
     box-shadow: inset 0 0 0 2px ${({ theme }) => theme.color.black};
+  }
+`;
+
+export const ButtonCross = styled.button`
+  width: 53px;
+  height: 53px;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  background-color: ${({ theme }) => theme.color.light};
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: '';
+    width: 53px;
+    height: 53px;
+    top: 0;
+    left: 0;
+    background: url(${iconCross}) no-repeat center;
+
+  }
+
+  &:hover {
+    background-color: ${({ theme }) => theme.color.gray};
+  }
+
+  &:focus {
+    background-color: ${({ theme }) => theme.color.gray};
+    box-shadow: 0 0 0 3px ${({ theme }) => theme.color.coolLight};
+  }
+
+  &:active {
+    background-color: ${({ theme }) => theme.color.gray};
+    box-shadow: none;
+
+    &::before {
+      opacity: 0.3;
+    }
   }
 `;

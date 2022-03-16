@@ -20,6 +20,7 @@ export { default as Filter } from './partials/filter/filter';
 export { default as CatalogList } from './partials/catalog-list/catalog-list';
 export { default as Sort } from './partials/sort/sort';
 export { default as Pagination } from './partials/pagination/pagination';
+export { default as Modal } from './partials/modal/modal';
 
 
 // SHARED
@@ -31,6 +32,9 @@ export { default as RangeControls } from './shared/range-controls/range-controls
 export { default as CatalogCard } from './shared/catalog-card/catalog-card';
 export { default as StarsBlock } from './shared/stars-block/stars-block';
 export { default as Select } from './shared/select/select';
+export { default as DateInput } from './shared/date-input/date-input';
+export { default as QuantityCounter } from './shared/quantity-counter/quantity-counter';
+export { default as Tooltip } from './shared/tooltip/tooltip';
 
 
 

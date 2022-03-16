@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { HeaderMedium, TextSemibase } from '../../ui-kit-styled/text.styled';
+import { TitleMedium, TextSemibase } from '../../ui-kit-styled/text.styled';
 import { ButtonWarm } from '../../ui-kit-styled/button.styled';
 
 const MainSearch = styled.section`
@@ -7,7 +7,7 @@ const MainSearch = styled.section`
   padding: 90px 303px;
 `;
 
-const MainSearchHeader = styled(HeaderMedium)`
+const MainSearchHeader = styled(TitleMedium)`
   margin-bottom: 30px;
 `;
 

@@ -1,14 +1,15 @@
 import * as S from './header.styled';
-import { useState, FocusEvent } from 'react';
+import { useState, FocusEvent, MouseEvent } from 'react';
 import { Favorites } from '../../components';
 import logo from '../../../assets/img/logos/logo-sedona.svg'
 import { AppRoute } from '../../constants';
 
 type HeaderProps = {
   currentPage: string,
+  onModalOpen: () => void;
 };
 
-function Header({ currentPage }: HeaderProps): JSX.Element {
+function Header({ currentPage, onModalOpen }: HeaderProps): JSX.Element {
 
   const [isFavsVisible, setIsFavsVisible] = useState<boolean>(false);
 
@@ -16,6 +17,11 @@ function Header({ currentPage }: HeaderProps): JSX.Element {
     if (!evt.currentTarget.contains(evt.relatedTarget)) {
       setIsFavsVisible(false);
     }
+  }
+
+  const onOrderClick = (evt: MouseEvent) => {
+    evt.preventDefault();
+    onModalOpen();
   }
 
   return (
@@ -59,7 +65,9 @@ function Header({ currentPage }: HeaderProps): JSX.Element {
           { isFavsVisible && <Favorites /> }
         </S.LinkIconWrapper>
         <S.HeaderOrder
-          to="#" >
+          to="#"
+          onClick={onOrderClick}
+        >
           Хочу сюда!
         </S.HeaderOrder>
       </S.HeaderInfo>

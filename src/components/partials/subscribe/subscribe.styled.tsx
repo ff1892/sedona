@@ -1,5 +1,5 @@
 import styled, {css} from 'styled-components';
-import { HeaderMedium, TextSemibase } from '../../ui-kit-styled/text.styled';
+import { TitleMedium, TextSemibase } from '../../ui-kit-styled/text.styled';
 import { ButtonCold } from '../../ui-kit-styled/button.styled';
 import subscribeBackground from '../../../assets/img/subscribe-background.jpg';
 
@@ -29,7 +29,7 @@ const Subscribe = styled.section<SubscribeProps>`
   }
 `;
 
-const SubscribeHeader = styled(HeaderMedium)`
+const SubscribeHeader = styled(TitleMedium)`
   margin-bottom: 29px;
 `;
 
