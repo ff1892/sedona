@@ -2,9 +2,9 @@ import * as S from './features.styled';
 import { useTheme } from 'styled-components';
 import backgroundCity from '../../../assets/img/feature-background-1.jpg';
 import backgroundNature from '../../../assets/img/feature-background-2.jpg';
-import iconHouse from '../../../assets/img/icons/icon-house.svg';
-import iconBurger from '../../../assets/img/icons/icon-burger.svg';
-import iconSouvenir from '../../../assets/img/icons/icon-souvenir.svg';
+import { ReactComponent as IconHouse } from '../../../assets/img/icons/icon-house.svg';
+import { ReactComponent as IconBurger } from '../../../assets/img/icons/icon-burger.svg';
+import { ReactComponent as IconSouvenir } from '../../../assets/img/icons/icon-souvenir.svg';
 
 import { FeatureItem, Advantage, MainIntro } from '../../components';
 
@@ -28,17 +28,17 @@ function Features() {
         background={theme.color.coolLight12}
         header='Жильё'
         text={`Рекомендуем пожить \n в настоящем мотеле, \n всё как в кино!`}
-        icon={iconHouse} />
+        icon={<IconHouse />} />
       <Advantage
         background={theme.color.white}
         header='Еда'
         text={`Всегда заказывайте \n топовый фирменный бургер, вы не разочаруетесь!`}
-        icon={iconBurger} />
+        icon={<IconBurger />} />
       <Advantage
         background={theme.color.coolLight12}
         header='Сувениры'
         text={`Не только китайского, \n но и настоящего местного производства!`}
-        icon={iconSouvenir} />
+        icon={<IconSouvenir />} />
       <FeatureItem
         background={theme.color.coolLight}
         textColor={theme.color.white}

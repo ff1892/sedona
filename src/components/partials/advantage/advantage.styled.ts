@@ -5,10 +5,6 @@ type AdvantageItemProps = {
   background: string;
 };
 
-type IconWrapperProps = {
-  backgroundSrc: string;
-};
-
 const Advantage = styled.div<AdvantageItemProps>`
   width: 400px;
   height: 384px;
@@ -21,12 +17,13 @@ const Advantage = styled.div<AdvantageItemProps>`
   text-align: center;
 `;
 
-const IconWrapper = styled.div<IconWrapperProps>`
+const IconWrapper = styled.div`
   margin-bottom: 15px;
-  height: 82px;
-  width: 82px;
-  background: url(${({ backgroundSrc }) => backgroundSrc}) center;
-  background-repeat: no-repeat;
+  height: 76px;
+  width: 76px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `
 
 const AdvantageHeader = styled.h3`
