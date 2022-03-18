@@ -5,7 +5,9 @@ const TooltipWrapper = styled.div`
   position: relative;
 `;
 
-const TooltipButton = styled.button`
+const TooltipButton = styled.button.attrs({
+  type: 'button',
+})`
   display: block;
   border: none;
   outline: none;
@@ -16,6 +18,7 @@ const TooltipButton = styled.button`
   background-image: url(${iconInfo});
   background-repeat: no-repeat;
   background-position: center;
+  cursor: pointer;
 
 
   :hover {

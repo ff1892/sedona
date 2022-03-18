@@ -37,6 +37,7 @@ const CounterButton = styled.button.attrs({
   justify-content: center;
   align-items: center;
   border-radius: 4px;
+  cursor: pointer;
   ${IconLinkStyleCounter}
 `;
 

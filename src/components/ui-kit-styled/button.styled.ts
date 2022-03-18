@@ -131,6 +131,7 @@ export const ButtonCross = styled.button.attrs({
   border-radius: 50%;
   background-color: ${({ theme }) => theme.color.light};
   position: relative;
+  cursor: pointer;
 
   &::before {
     position: absolute;

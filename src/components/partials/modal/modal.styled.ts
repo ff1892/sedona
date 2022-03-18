@@ -133,6 +133,7 @@ const ModalSubmit = styled(ButtonCold).attrs({
   padding: 18px 0;
   font-size: ${({ theme }) => theme.font.small};
   line-height: ${({ theme }) => theme.font.small};
+  cursor: pointer;
 `;
 
 export {
