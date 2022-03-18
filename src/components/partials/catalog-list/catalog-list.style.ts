@@ -14,10 +14,15 @@ const ButtonWrapper = styled.div`
   border-bottom: 1px solid ${({ theme }) => theme.color.gray};
 `;
 
-const LoadAllButton = styled(ButtonCold)`
+const LoadAllButton = styled(ButtonCold).attrs({
+  type: 'button',
+})`
+  border: none;
   font-size: ${({ theme }) => theme.font.small};
   line-height: ${({ theme }) => theme.font.small};
-  padding: 17px 240px;
+  padding: 17px 50px;
+  min-width: 625px;
+  cursor: pointer;
 `;
 
 export {

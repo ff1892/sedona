@@ -55,6 +55,7 @@ const DeleteButton = styled.button.attrs({
   margin-top: 7px;
   opacity: 0.2;
   border-radius: 10px;
+  cursor: pointer;
 
   &:hover {
     opacity: 1;

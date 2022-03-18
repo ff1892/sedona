@@ -19,15 +19,15 @@ function CatalogCard({
 
   return (
     <S.CatalogCard>
-      <S.CardImgLink to="/">
+      <S.CardImgLink to="#">
         <S.CardImg src={imageSrc} alt={title}/>
       </S.CardImgLink>
-      <S.CardTitle to="/">{title}</S.CardTitle>
+      <S.CardTitle to="#">{title}</S.CardTitle>
       <S.CardType>{type}</S.CardType>
       <S.CardMinPrice>От {minPrice} ₽</S.CardMinPrice>
-      <S.ButtonMoreInfo to="/">Подробнее</S.ButtonMoreInfo>
-      {isFavorite ? <S.ButtonInFavorites to="/">В избранном</S.ButtonInFavorites>
-        : <S.ButtonToFavorites to="/">В избранное</S.ButtonToFavorites> }
+      <S.ButtonMoreInfo as="button">Подробнее</S.ButtonMoreInfo>
+      {isFavorite ? <S.ButtonInFavorites as="button">В избранном</S.ButtonInFavorites>
+        : <S.ButtonToFavorites as="button">В избранное</S.ButtonToFavorites> }
       <StarsBlock count={starsCount} />
       <S.Rating>Рейтинг: {modifiedRating} </S.Rating>
     </S.CatalogCard>

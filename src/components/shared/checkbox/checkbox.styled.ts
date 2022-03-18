@@ -58,6 +58,8 @@ const Label = styled.label.attrs<LabelProps>(({ inputId }) => ({
   line-height: ${({ theme }) => theme.font.extraSmall};
   padding-left: 40px;
   position: relative;
+  cursor: pointer;
+
 
   &::before {
     position: absolute;

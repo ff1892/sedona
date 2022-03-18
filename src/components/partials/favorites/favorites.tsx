@@ -28,7 +28,7 @@ function Favorites (props: FavoriteProps) {
           />
         </S.FavoritesList>
       </S.FavoritesContainer>
-      <S.FavoritesButton to="/">
+      <S.FavoritesButton to="#">
         Все избранные
       </S.FavoritesButton>
     </S.Favorites>

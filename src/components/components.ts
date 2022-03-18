@@ -17,8 +17,10 @@ export { default as MainSearch } from './partials/main-search/main-search';
 export { default as Subscribe } from './partials/subscribe/subscribe';
 export { default as CatalogHero } from './partials/catalog-hero/catalog-hero';
 export { default as Filter } from './partials/filter/filter';
+export { default as FilterPrice } from './partials/filter-price/filter-price';
 export { default as CatalogList } from './partials/catalog-list/catalog-list';
 export { default as Sort } from './partials/sort/sort';
+export { default as ViewToggler } from './partials/view-toggler/view-toggler';
 export { default as Pagination } from './partials/pagination/pagination';
 export { default as Modal } from './partials/modal/modal';
 
@@ -26,6 +28,7 @@ export { default as Modal } from './partials/modal/modal';
 // SHARED
 export { default as Checkbox } from './shared/checkbox/checkbox';
 export { default as Radio } from './shared/radio/radio';
+export { default as RadioIcon } from './shared/radio-icon/radio-icon';
 export { default as Breadcrumbs } from './shared/breadcrumbs/breadcrumbs';
 export { default as PriceInput } from './shared/price-input/price-input';
 export { default as RangeControls } from './shared/range-controls/range-controls';

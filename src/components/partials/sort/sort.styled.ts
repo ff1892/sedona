@@ -11,21 +11,25 @@ const Sort = styled.section`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 43px;
 
   select {
     padding: 15px 90px 15px 19px;
   }
 `;
 
-const SortHeader = styled(TitleMedium)`
-  margin-right: 120px;
+const SortTitle = styled(TitleMedium)`
+  margin-right: 192px;
+  flex-grow: 0;
 `;
 
-const ButtonsWrapper = styled.div`
-  > * {
-    margin-left: 8px;
-  }
+const SortForm = styled.form.attrs({
+  action: '#',
+  method: 'get',
+})`
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
 `;
 
 const SortButton = styled(ButtonIconBlack)<SortButtonProps>`
@@ -38,7 +42,7 @@ const SortButton = styled(ButtonIconBlack)<SortButtonProps>`
 
 export {
   Sort,
-  SortHeader,
-  ButtonsWrapper,
+  SortForm,
+  SortTitle,
   SortButton,
 };

@@ -43,7 +43,6 @@ const SubscribeForm = styled.form.attrs({
   method: 'post',
 })`
   display: flex;
-  flex-direction: row-reverse;
   justify-content: center;
 
 `;
@@ -99,6 +98,8 @@ const SubscribeButton = styled(ButtonCold).attrs({
   padding: 20px 35px 20px 25px;
   font-size: ${({ theme }) => theme.font.extraSmall};
   letter-spacing: 0;
+  z-index: 2;
+  cursor: pointer;
 
   &:active ~ input {
     background-color: ${({ theme }) => theme.color.white};

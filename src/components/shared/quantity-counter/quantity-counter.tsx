@@ -29,7 +29,7 @@ function QuantityCounter ({
 
       </S.LabelWrapper>
       <S.CounterInputWrapper>
-        <S.CounterButton aria-label="Уменьшить количесвто">
+        <S.CounterButton aria-label="Уменьшить количество">
           <IconMinus />
         </S.CounterButton>
         <S.CounterInput
@@ -37,7 +37,7 @@ function QuantityCounter ({
           inputName={inputName}
           inputId={inputId}
         />
-        <S.CounterButton aria-label="Увеличить количесвто">
+        <S.CounterButton aria-label="Увеличить количество">
           <IconPlus />
         </S.CounterButton>
       </S.CounterInputWrapper>

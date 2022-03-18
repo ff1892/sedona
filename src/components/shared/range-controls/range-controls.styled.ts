@@ -31,7 +31,9 @@ const Bar = styled(Scale)<BarProps>`
   background-color: ${({ theme }) => theme.color.white};
 `;
 
-const Button = styled.button<ButtonProps>`
+const Button = styled.button.attrs({
+  type: 'button',
+})<ButtonProps>`
   margin: 0;
   border: 0;
   position: absolute;
@@ -42,6 +44,7 @@ const Button = styled.button<ButtonProps>`
   top: 0;
   left: ${({ position }) => position === 0 ? 0 : `${position}%`};
   border-radius: 5px;
+  cursor: pointer;
 
   &:hover {
     box-shadow: 0 4px 10px 0 ${({ theme }) => theme.color.black25};

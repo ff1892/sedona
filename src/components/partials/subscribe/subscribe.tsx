@@ -14,8 +14,8 @@ function Subscribe({ hasBackground=false }: SubscribeProps) {
         Только полезная информация и никакого спама, честное бойскаутское!
       </S.SubscribeText>
       <S.SubscribeForm>
-          <S.SubscribeButton as="input" value="Подписаться" />
           <S.SubscribeInput placeholder="Ваш e-mail" isError={false}/>
+          <S.SubscribeButton as="input" value="Подписаться" />
       </S.SubscribeForm>
     </S.Subscribe>
   );

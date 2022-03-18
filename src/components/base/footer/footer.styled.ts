@@ -7,7 +7,7 @@ import { TextLinkStyleBlack, IconLinkStyleBlack, IconLinkStyleCool } from '../..
 
 const Footer = styled.footer`
   flex-shrink: 0;
-  padding: 22px 50px 25px 60px;
+  padding: 25px 50px 25px 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;

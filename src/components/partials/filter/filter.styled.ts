@@ -62,6 +62,7 @@ const SubmitButton = styled(ButtonColdFilter).attrs({
   padding: 14px 30px;
   border: none;
   margin-bottom: 20px;
+  cursor: pointer;
 `;
 
 const ResetButton = styled.input.attrs({
@@ -74,6 +75,7 @@ const ResetButton = styled.input.attrs({
   color: ${({ theme }) => theme.color.white};
   font-size: ${({ theme }) => theme.font.extraSmall};
   line-height: ${({ theme }) => theme.font.extraSmall};
+  cursor: pointer;
 
   :hover {
     color: ${({ theme }) => theme.color.white60};

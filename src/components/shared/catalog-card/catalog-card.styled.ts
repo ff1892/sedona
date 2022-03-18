@@ -13,7 +13,7 @@ import {
 } from '../../ui-kit-styled/button.styled';
 
 const ButtonStyle = css`
-  padding: 9px 31px;
+  padding: 9px 24px;
   min-height: 37px;
 `;
 
@@ -22,7 +22,7 @@ const CatalogCard = styled.li`
   display: grid;
   grid-template-columns: max-content max-content auto max-content;
   grid-template-rows: min-content 1fr min-content;
-  grid-column-gap: 8px;
+  column-gap: 8px;
   padding: 20px 0 30px;
   border-bottom: 1px solid ${({ theme }) => theme.color.gray};
 
@@ -40,7 +40,7 @@ const CardImgLink = styled(Link)`
   grid-column: 1/2;
   grid-row: 1/4;
   margin-right: 16px;
-  padding-top: 10px;
+  margin-top: 10px;
   ${ImageLinkStyle}
 `;
 
@@ -76,26 +76,38 @@ const CardMinPrice = styled(CardType)`
   grid-row: 2/3;
 `;
 
-const ButtonMoreInfo = styled(ButtonWarm)`
+const ButtonMoreInfo = styled(ButtonWarm).attrs({
+  type: 'button',
+})`
+  border: none;
   margin-left: 11px;
   grid-column: 2/3;
   grid-row: 3/4;
   align-self: end;
+  cursor: pointer;
   ${ButtonStyle}
 `;
-const ButtonToFavorites = styled(ButtonColdCatalog)`
+const ButtonToFavorites = styled(ButtonColdCatalog).attrs({
+  type: 'button',
+})`
+  border: none;
   grid-column: 3/4;
   grid-row: 3/4;
   align-self: end;
   margin-right: auto;
+  cursor: pointer;
   ${ButtonStyle}
 `;
 
-const ButtonInFavorites = styled(ButtonNeutral)`
+const ButtonInFavorites = styled(ButtonNeutral).attrs({
+  type: 'button',
+})`
+  border: none;
   grid-column: 3/4;
   grid-row: 3/4;
   align-self: end;
   margin-right: auto;
+  cursor: pointer;
   ${ButtonStyle}
 `;
 

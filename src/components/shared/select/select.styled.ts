@@ -15,6 +15,7 @@ const Select = styled.select`
   outline: none;
   box-shadow: inset 0 0 0 2px ${({ theme}) => theme.color.gray};
   background: url(${iconSelect}) no-repeat 90% 50%;
+  cursor: pointer;
 
   &:hover {
     box-shadow: inset 0 0 0 2px ${({ theme }) => theme.color.coolLight};

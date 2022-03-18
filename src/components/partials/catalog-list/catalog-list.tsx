@@ -47,7 +47,7 @@ function CatalogList(): JSX.Element {
         />
       </S.CatalogList>
       <S.ButtonWrapper>
-        <S.LoadAllButton to="/">
+        <S.LoadAllButton as="button">
           Загрузить ещё
         </S.LoadAllButton>
       </S.ButtonWrapper>

@@ -27,7 +27,9 @@ const CounterInputWrapper = styled.div`
   background-color: ${({ theme }) => theme.color.light};
 `;
 
-const CounterButton = styled.button`
+const CounterButton = styled.button.attrs({
+  type: 'button',
+})`
   border: none;
   width: 25px;
   height: 25px;

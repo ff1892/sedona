@@ -1,8 +1,7 @@
 import * as S from './filter.styled';
 
 import {
-  PriceInput,
-  RangeControls,
+  FilterPrice,
   Checkbox,
   Radio,
 } from '../../components';
@@ -60,21 +59,16 @@ function Filter(): JSX.Element {
       </S.Fieldset>
       <S.Fieldset>
         <S.Legend>Стоимость, ₽:</S.Legend>
-          <S.PriceInputWrapper>
-            <PriceInput
-              inputId="minPrice"
-              position="left"
-              labelName="от"
-              placeholderText="0"
-            />
-            <PriceInput
-              inputId="maxPrice"
-              position="right"
-              labelName="до"
-              placeholderText="9000"
-            />
-          </S.PriceInputWrapper>
-          <RangeControls min={0} max={75} />
+          <FilterPrice
+            minInputId="minPrice"
+            minLabelName="от"
+            minCurrent={0}
+            min={0}
+            maxInputId="maxPrice"
+            maxLabelName="до"
+            maxCurrent={9000}
+            max={12000}
+          />
       </S.Fieldset>
       <S.ButtonWrapper>
         <S.SubmitButton as="input" value="Применить" />

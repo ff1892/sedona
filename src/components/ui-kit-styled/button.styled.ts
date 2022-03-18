@@ -121,7 +121,9 @@ export const ButtonIconBlack = styled.button`
   }
 `;
 
-export const ButtonCross = styled.button`
+export const ButtonCross = styled.button.attrs({
+  type: 'button',
+})`
   width: 53px;
   height: 53px;
   border: none;
